@@ -116,8 +116,8 @@ namespace SimplifiedSlotMachine.Services
 
             if (matches.Count >= matchingSymbols)
             {
-                var sequence = new MatchingSequence() { Symbols = matches.ToArray() };
-                matchingSequences.Add(sequence);
+                var sequence = matches.Select(x => new MatchingSequence { Symbol = x.Symbol, Coefficient = x.Coefficient });                
+                matchingSequences.AddRange(sequence);
             }
 
             return matchingSequences;
