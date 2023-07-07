@@ -74,28 +74,12 @@ namespace SimplifiedSlotMachine.Services
         private decimal CalculateWinAmount(GameSettings gameSettings, SymbolSettings[,] grid, decimal stakeAmount)
         {
             var matchingSequences = _matchingSequenceChecker.FindMatchingSequences(gameSettings, grid);
-            decimal winAmount = 0;
 
-            foreach (var sequence in matchingSequences)
-            {
-                decimal sequenceCoefficient = CalculateSequenceCoefficient(sequence);
-                winAmount += sequenceCoefficient * stakeAmount;
-            }
+            var sequenceCoefficient = matchingSequences.Sum(x => x.Coefficient);
+            var winAmount = sequenceCoefficient * stakeAmount;
 
             return winAmount;
         }       
-
-        private decimal CalculateSequenceCoefficient(MatchingSequence sequence)
-        {
-            decimal coefficient = 0;
-
-            foreach (var symbol in sequence.Symbols)
-            {
-                coefficient += symbol.Coefficient;
-            }
-
-            return coefficient;
-        }
 
         private decimal UpdateBalance(decimal currentBalance, decimal stakeAmount, decimal winAmount)
         {
