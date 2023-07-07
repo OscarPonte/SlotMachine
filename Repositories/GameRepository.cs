@@ -17,7 +17,7 @@ namespace SimplifiedSlotMachine.Repositories
                 MatchingSymbols = 3,
                 HorizontalMatchingEnabled = true,
                 VerticalMatchingEnabled = false, // These are just for fun. feel free to enable them and enjoy greater winnings :)
-                DiagonalMatchingEnabled = false,
+                DiagonalMatchingEnabled = false, // These are just for fun. feel free to enable them and enjoy greater winnings :)
                 SupportedSymbols = new List<SymbolSettings> 
                 {
                     new SymbolSettings { Symbol = SymbolType.Apple, SymbolValue = 'A', Coefficient = 0.4m, Probability = 45 },             
