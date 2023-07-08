@@ -86,6 +86,7 @@ public class MatchingSequenceCheckerTests
     }
 
     [Test]
+    // Pending bug fix. if the matrix is 3x4 the diagonal check skips a potential matching sequence.
     public void FindMatchingSequences_DiagonalMatchingEnabled_ReturnsMatchingSequences()
     {
         // Arrange
