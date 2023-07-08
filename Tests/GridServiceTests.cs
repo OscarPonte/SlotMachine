@@ -48,8 +48,8 @@ namespace SimplifiedSlotMachine.Tests
             // Arrange
             var gameSettings = new GameSettings
             {
-                Rows = 3,
-                Columns = 5,
+                Rows = 4,
+                Columns = 3,
                 SupportedSymbols = new List<SymbolSettings>
                 {
                     { new SymbolSettings { Symbol = SymbolType.Apple, SymbolValue = 'A', Coefficient = 0.4m, Probability = 45 } },
