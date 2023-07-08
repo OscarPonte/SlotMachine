@@ -67,7 +67,9 @@ namespace SimplifiedSlotMachine.Services
             // Check for diagonal (\) matching sequences
             for (int i = 0; i <= rows; i++)
             {
-                var currentDiagonalLength = maxDiagonalLength - i;
+                var lengthAdjustment = i > 0 && rows > columns ? rows - columns : 0;
+
+                var currentDiagonalLength = maxDiagonalLength - (i - lengthAdjustment);
 
                 if (currentDiagonalLength < matchingSymbols)
                 {

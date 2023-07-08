@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
 using SimplifiedSlotMachine.Enums;
 using SimplifiedSlotMachine.Models;
-using SimplifiedSlotMachine.Services.Interfaces;
 using SimplifiedSlotMachine.Services;
+using SimplifiedSlotMachine.Services.Interfaces;
 
 [TestFixture]
 public class MatchingSequenceCheckerTests
